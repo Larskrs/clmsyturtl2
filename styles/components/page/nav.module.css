@@ -1,0 +1,59 @@
+.container {
+    height: 3.5rem;
+    background-color: var(--bg1);
+    width: 100%;
+    position:static;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px rgb(162, 162, 162) solid;
+    
+}
+.logo img {
+    filter: invert(80%);
+}
+@media (prefers-color-scheme: dark) {
+    .logo img {
+        filter: invert(0);
+    }
+}
+.container a {
+    color: rgb(86, 185, 255);
+    cursor: pointer;
+}
+.container section {
+    background-color: var(--bg1);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-inline: 2rem;
+    cursor: pointer;
+    gap: 1rem;
+}
+.logo {
+    position: relative;
+    height: 1rem;
+    width: 12rem;
+    margin-left: 2rem;
+    background: none;
+}
+.avatar {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.container button {
+    padding: .5rem 1rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+.container li {
+    padding: .5rem;
+    background-color: var(--bg2);
+}

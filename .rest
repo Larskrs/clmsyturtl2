@@ -1,0 +1,10 @@
+###
+
+POST http://localhost:3000/api/documents/edit/field
+Content-Type: 'application/json'
+
+{
+    "field": "cl8x6hrza002ptyr8fob59mzv",
+    "content": "",
+    "type": "question"
+}

@@ -1,0 +1,137 @@
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-1);
+    background-size: cover;
+    display: flex;
+    height: 29rem;
+    border-bottom: black solid 1px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+.headerBg {
+    filter: blur(6px);
+    z-index: 1;
+    width: 100%;
+    transform: scale(1.05);
+    opacity: .5;
+    height: 29rem;
+    background-image: url('http://clumsyturtle.com/api/files?fileId=4dc0311d-f2ad-4ccc-ae0a-08a07b2cbd6b.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: static;
+    opacity: 0;
+    animation: SwoopRight 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.headerBg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(-90deg, rgba(255,255,255,0), var(--color-1));
+}
+.header main{
+    position: absolute;
+    padding: 4rem;
+    z-index: 2;
+    overflow: hidden;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    font-size: 20px;
+    z-index: 2;
+
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.header main h1 {
+    margin: 0;
+    font-size: 80px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media only screen and (max-width: 800px) {
+    .header main h1 {
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .cardContainer{
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        padding-top: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+    }
+    
+    .section {
+        padding-inline: 1rem;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-self: center;
+        justify-self: center;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .header main {
+        margin-left: 100px;
+    }
+}
+.header main p {
+    margin: 0;
+    max-width: 400px;
+}
+.header main p span {
+    font-size: 130%;
+    font-weight: 600;
+}
+.header main p b {
+    background-color: var(--color-4);
+    font-weight: 500;
+}
+.header main button {
+    padding: .5rem;
+    padding-inline: 2rem;
+    border-radius: 10rem;
+    border: none;
+    font-size: 20px;
+    width: fit-content;
+    opacity: 0;
+    animation: swoopD 1s  300ms forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+
+@keyframes SwoopRight {
+    0% {
+        transform: translateX(1000px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes swoopD {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
